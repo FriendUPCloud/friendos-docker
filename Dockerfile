@@ -25,7 +25,8 @@ RUN apt-get update && \
 		build-essential \
 		libmatheval-dev \
 		libmagic-dev \
-		libgd-dev libuv1 \
+		libgd-dev \
+		libuv1 \
 		rsync \
 		valgrind-dbg \
 		libxml2-dev \
@@ -34,7 +35,7 @@ RUN apt-get update && \
 		make \
 		libsmbclient-dev \
 		libwebsockets-dev \
-		libsqlite3-dev
+		libsqlite3-dev && \
 	apt-get clean
 
 # Copy database and init script
