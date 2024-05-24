@@ -12,9 +12,29 @@ RUN apt-get update && \
 		php7.4-gd \
 		php7.4-zip \
 		php7.4-curl \
+		php7.4-readline \
 		curl \
 		wget \
-		nano && \
+		nano \
+		bash \
+		libssh2-1-dev \
+		libssh-dev \
+		libssl-dev \
+		libaio-dev \
+		libmysqlclient-dev \
+		build-essential \
+		libmatheval-dev \
+		libmagic-dev \
+		libgd-dev libuv1 \
+		rsync \
+		valgrind-dbg \
+		libxml2-dev \
+		cmake \
+		ssh \
+		make \
+		libsmbclient-dev \
+		libwebsockets-dev \
+		libsqlite3-dev
 	apt-get clean
 
 # Copy database and init script
