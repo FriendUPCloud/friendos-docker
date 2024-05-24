@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
 	apt-get install -y software-properties-common \
 		build-essential \
+		git \
 		php7.4 \
 		php7.4-mysqli \
 		php7.4-gd \
@@ -39,17 +40,21 @@ RUN apt-get update && \
 	apt-get clean
 
 # Copy database and init script
-COPY ./assets/init-system.sh /docker-entrypoint-initdb.d/
+COPY ./assets/init-system.sh /usr/local/bin/
+
+COPY ./assets/site.ini /tmp/
+
+WORKDIR /opt/
+
+# Make the initialization script executable
+RUN chmod +x /usr/local/bin/init-system.sh
 
 # Expose port 6502 and 6205 for Friend Core https and wss
 EXPOSE 6502
 EXPOSE 6505
 
-# Make the initialization script executable
-RUN chmod +x /docker-entrypoint-initdb.d/init-system.sh
-
-# Start the initialization script
-CMD ["/docker-entrypoint-initdb.d/init-system.sh"]
+# Set the entry point to the initialization script
+ENTRYPOINT ["/usr/local/bin/init-system.sh"]
 
 
 
