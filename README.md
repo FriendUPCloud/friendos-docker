@@ -2,7 +2,7 @@
 A clean and simple Docker image for Friend OS. You need the following additional
 docker images in order to run this.
 
- * friendos-mysql-docker - run this first
+ * [https://github.com/friendupCloud/friendos-mysql-docker](friendos-mysql-docker) - run this first
  * friendos-file-server-docker - run this second
  * ... then run this docker image
 
