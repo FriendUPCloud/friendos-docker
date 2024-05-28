@@ -14,7 +14,9 @@ Once these images are running, you can find FriendOS in a browser at:
 
  * http://localhost:16502/webclient/index.html
 
-Websocket will not be working. In order to fix that, you should set up a basic reverse proxy from port 16500 to 6500. Additionally, you should set up a reverse proxy from port 16502 to 443 (with SSL) or 80 (without SSL).
+Websocket will not be working. In order to fix that, you should set up a basic reverse proxy from port 16500 to 6500. 
+
+It's not fun to access a web service on port 16502. You should set up a reverse proxy from port 16502 to 443 (with SSL) or 80 (without SSL), allowing you to access FriendOS simply at https://yourhost/.
 
 **Good luck!**
 
