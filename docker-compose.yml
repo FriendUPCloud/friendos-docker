@@ -2,7 +2,7 @@ version: '3.3'
 
 networks:
   friendos-network:
-    driver: bridge
+    external: true
 
 services:
   friendos:
@@ -13,5 +13,7 @@ services:
     container_name: friendos-docker-container
     ports:
       - "16502:6502"
+      - "16500:6500"
     networks:
       - friendos-network
+
