@@ -21,6 +21,8 @@ Websocket will not be working. In order to fix that, you should set up a basic r
 
 It's not fun to access a web service on port 16502. You should set up a reverse proxy from port 16502 to 443 (with SSL) or 80 (without SSL), allowing you to access FriendOS simply at https://yourhost/.
 
+An example vhost.conf is located in assets/.
+
 **Good luck!**
 
 
