@@ -17,7 +17,7 @@ docker build -t friendos-docker ./
 ## Run the Docker
 
 ```bash
-docker run -d -p 16502:6502 --name friendos-docker-container --network friendos-network friendos-docker
+docker-compose up --build
 ```
 
 ## If you want to enter the docker container
