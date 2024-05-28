@@ -10,11 +10,7 @@ In order to make everything working, you need to set up a docker network so that
 
  * docker network create friendos-network
 
-## Building
-
-docker build -t friendos-docker ./
-
-## Run the Docker
+## Building and running
 
 ```bash
 docker-compose up --build
