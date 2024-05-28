@@ -1,4 +1,4 @@
-# Use the official latest Ubuntu base image
+# Use the Ubuntu base image
 FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -46,18 +46,20 @@ RUN git clone https://github.com/FriendUPCloud/friendup/ && \
     git checkout release/1.3.0 && \
     echo "USE_SSH_THREADS_LIB=0" >> Config && \
     echo "OPENSSL_INTERNAL=1" >> Config && \
-    make clean setup
+    make clean setup && \
+    make compile && make install
+
+COPY ./assets/cfg.ini /opt/friendup/build/cfg/
 
 # Copy database and init script
 COPY ./assets/init-system.sh /usr/local/bin/
-COPY ./assets/site.ini /tmp/
+COPY ./assets/site.ini /opt/friendup/build/
 
 # Make the initialization script executable
 RUN chmod +x /usr/local/bin/init-system.sh
 
 # Expose port 6502 and 6205 for Friend Core https and wss
 EXPOSE 6502
-EXPOSE 6505
 
 # Set the entry point to the initialization script
 ENTRYPOINT ["/usr/local/bin/init-system.sh"]
