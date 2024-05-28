@@ -1,0 +1,17 @@
+version: '3.3'
+
+networks:
+  friendos-network:
+    driver: bridge
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: friendos-docker
+    container_name: friendos-docker-container
+    ports:
+      - "16502:6502"
+    networks:
+      - friendos-network
