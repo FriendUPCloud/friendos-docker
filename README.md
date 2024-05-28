@@ -1,7 +1,7 @@
-![image](https://github.com/FriendUPCloud/friendos-docker/blob/main/friendos.jpg?raw=true "Friend OS v1.3 Helium")
+![image](https://github.com/FriendUPCloud/friendos-docker/blob/main/friendos.jpg?raw=true "FriendOS v1.3 Helium")
 
 # friendos-docker
-A clean and simple Docker image for Friend OS. You need the following additional docker images in order to run this.
+This is a clean and simple Docker image implementation of FriendOS. By cloning the right repository, you should be able to build the required docker images without worrying about dependencies. You need the following additional docker images in order to run this.
 
  * [friendos-mysql-docker](https://github.com/friendupCloud/friendos-mysql-docker) - run this first
  * ... then run this docker image
