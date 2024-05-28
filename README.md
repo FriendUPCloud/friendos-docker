@@ -1,4 +1,4 @@
-![image](friendos.png "Friend OS v1.3 Helium")
+![image](https://github.com/FriendUPCloud/friendos-docker/blob/main/friendos.jpg?raw=true "Friend OS v1.3 Helium")
 
 # friendos-docker
 A clean and simple Docker image for Friend OS. You need the following additional
