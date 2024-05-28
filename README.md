@@ -13,6 +13,9 @@ In order to make everything working, you need to set up a docker network so that
 Once these images are running, you can find FriendOS in a browser at:
 
  * http://localhost:16502/webclient/index.html
+ * Log in using;
+   - username: fadmin
+   - password: securefassword
 
 Websocket will not be working. In order to fix that, you should set up a basic reverse proxy from port 16500 to 6500. 
 
