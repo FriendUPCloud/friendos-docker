@@ -5,7 +5,7 @@ networks:
     driver: bridge
 
 services:
-  mysql:
+  friendos:
     build:
       context: .
       dockerfile: Dockerfile
