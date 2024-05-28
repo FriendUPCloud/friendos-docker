@@ -1,3 +1,5 @@
+![image](friendos.png "Friend OS v1.3 Helium")
+
 # friendos-docker
 A clean and simple Docker image for Friend OS. You need the following additional
 docker images in order to run this.
